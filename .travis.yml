@@ -1,0 +1,10 @@
+sudo: required
+services: 
+  - docker
+
+before_install:
+  - docker build -t maaz/docker-react -f Dockerfile.dev .
+
+script: 
+  - docker run maaz/docker-react npm run test -- --coverage
+
