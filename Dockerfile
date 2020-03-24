@@ -2,7 +2,7 @@ FROM centos:latest as builder
 
 WORKDIR /home/frontend
 
-COPY package.json /
+COPY package.json ./
 
 RUN yum install -y npm && npm install
 
